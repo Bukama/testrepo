@@ -5,4 +5,10 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Test-Parent</name>
+
+  <modules>
+  	<module>Testproject_Client</module>
+  	<module>Testproject_EJB</module>
+  	<module>Testproject_EAR</module>
+  </modules>
 </project>
