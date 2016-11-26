@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>test</groupId>
 	<artifactId>Testproject</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.4</version>
 	<packaging>pom</packaging>
 	<name>Test-Parent</name>
 
@@ -46,6 +46,6 @@
 		<connection>scm:git:https://github.com/Bukama/testrepo.git</connection>
 		<developerConnection>scm:git:https://github.com/Bukama/testrepo.git</developerConnection>
 		<url>https://github.com/Bukama/testrepo</url>
-		<tag>HEAD</tag>
+		<tag>v0.0.4</tag>
 	</scm>
 </project>
