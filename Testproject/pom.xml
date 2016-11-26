@@ -1,14 +1,36 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>test</groupId>
-  <artifactId>Testproject</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>Test-Parent</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>test</groupId>
+	<artifactId>Testproject</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Test-Parent</name>
 
-  <modules>
-  	<module>Testproject_Client</module>
-  	<module>Testproject_EJB</module>
-  	<module>Testproject_EAR</module>
-  </modules>
+	<modules>
+		<module>Testproject_Client</module>
+		<module>Testproject_EJB</module>
+		<module>Testproject_EAR</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+<!--  This -->
+	<scm>
+		<connection>scm:git:https://github.com/Bukama/testrepo.git</connection>
+		<developerConnection>scm:git:https://github.com/Bukama/testrepo.git</developerConnection>
+		<url>https://github.com/Bukama/testrepo</url>
+		<tag>HEAD</tag>
+	</scm>
 </project>

@@ -3,7 +3,15 @@
   <parent>
     <groupId>test</groupId>
     <artifactId>Testproject</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
   </parent>
   <artifactId>Testproject_Client</artifactId>
+  
+  <!-- 
+    <scm>
+    <connection>scm:git:https://github.com/Bukama/testrepo.git</connection>
+    <developerConnection>scm:git:https://github.com/Bukama/testrepo.git</developerConnection>
+    <url>https://github.com/Bukama/testrepo</url>
+    <tag>HEAD</tag>
+  </scm> -->
 </project>
