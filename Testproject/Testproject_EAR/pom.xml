@@ -23,4 +23,17 @@
     <url>https://github.com/Bukama/testrepo</url>
     <tag>HEAD</tag>
   </scm>
+  
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>bish-PC-releases</name>
+        <url>http://localhost:8081/artifactory/testgroup</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>bish-PC-snapshots</name>
+        <url>http://localhost:8081/artifactory/testgroup</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
