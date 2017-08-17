@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Testproject_EAR-0.0.1-SNAPSHOT">
+    <wb-module deploy-name="Testproject_EAR-0.0.5-SNAPSHOT">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
-        <dependent-module archiveName="Testproject_EJB-0.0.4-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/Testproject_EJB/Testproject_EJB">
+        <dependent-module archiveName="Testproject_EJB-0.0.5-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/Testproject_EJB/Testproject_EJB">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>

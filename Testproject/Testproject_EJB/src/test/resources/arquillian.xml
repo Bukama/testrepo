@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian xmlns="http://arquillian.org/xsd/arquillian"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+      http://arquillian.org/xsd/arquillian
+      http://arquillian.org/xsd/arquillian-1.0.xsd">
+
+	<defaultProtocol type="Servlet 3.0" />
+
+<!-- 
+	<group qualifier="wildflys" default="true">
+		<container qualifier="wildfly-prepared" default="true">
+			<configuration>
+				<property name="managementAddress">localhost</property>
+				<property name="managementPort">${mgmtport}</property>
+				<property name="username">${mgmtuser}</property>
+				<property name="password">${mgmtpwd}</property>
+			</configuration>
+		</container>
+	</group> -->
+
+	<extension qualifier="persistence">
+		<property name="defaultDataSeedStrategy">CLEAN_INSERT</property>
+		<property name="defaultCleanupStrategy">USED_ROWS_ONLY</property>
+    <property name="defaultDataSource">java:/WritingDS</property>
+	</extension>
+
+	<extension qualifier="transaction">
+		<property name="manager">java:jboss/UserTransaction</property>
+	</extension>
+</arquillian>

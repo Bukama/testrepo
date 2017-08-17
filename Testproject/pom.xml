@@ -7,7 +7,6 @@
 	<name>Test-Parent</name>
 
 	<modules>
-		<module>Testproject_Client</module>
 		<module>Testproject_EJB</module>
 		<module>Testproject_EAR</module>
 	</modules>
