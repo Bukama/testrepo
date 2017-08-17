@@ -5,5 +5,113 @@
         <dependent-module archiveName="Testproject_EJB-0.0.5-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/Testproject_EJB/Testproject_EJB">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="arquillian-persistence-dbunit-1.0.0.Alpha7.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/extension/arquillian-persistence-dbunit/1.0.0.Alpha7/arquillian-persistence-dbunit-1.0.0.Alpha7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-persistence-api-1.0.0.Alpha7.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/extension/arquillian-persistence-api/1.0.0.Alpha7/arquillian-persistence-api-1.0.0.Alpha7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-persistence-spi-1.0.0.Alpha7.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/extension/arquillian-persistence-spi/1.0.0.Alpha7/arquillian-persistence-spi-1.0.0.Alpha7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-persistence-core-1.0.0.Alpha7.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/extension/arquillian-persistence-core/1.0.0.Alpha7/arquillian-persistence-core-1.0.0.Alpha7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-transaction-jta-1.0.1.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/extension/arquillian-transaction-jta/1.0.1.Final/arquillian-transaction-jta-1.0.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-transaction-impl-base-1.0.1.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/extension/arquillian-transaction-impl-base/1.0.1.Final/arquillian-transaction-impl-base-1.0.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-transaction-spi-1.0.1.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/extension/arquillian-transaction-spi/1.0.1.Final/arquillian-transaction-spi-1.0.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-transaction-api-1.0.1.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/extension/arquillian-transaction-api/1.0.1.Final/arquillian-transaction-api-1.0.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dbunit-2.5.0.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/dbunit/dbunit/2.5.0/dbunit-2.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.7.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="snakeyaml-1.10.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/yaml/snakeyaml/1.10/snakeyaml-1.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-mapper-asl-1.9.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-asl-1.9.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="poi-3.2-FINAL.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/apache/poi/poi/3.2-FINAL/poi-3.2-FINAL.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-logging/commons-logging/1.1/commons-logging-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.13.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.13/log4j-1.2.13.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-core-impl-base-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/core/arquillian-core-impl-base/1.1.3.Final/arquillian-core-impl-base-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-core-api-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/core/arquillian-core-api/1.1.3.Final/arquillian-core-api-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-test-impl-base-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/test/arquillian-test-impl-base/1.1.3.Final/arquillian-test-impl-base-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-test-api-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/test/arquillian-test-api/1.1.3.Final/arquillian-test-api-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-core-spi-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/core/arquillian-core-spi/1.1.3.Final/arquillian-core-spi-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-container-spi-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/container/arquillian-container-spi/1.1.3.Final/arquillian-container-spi-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-config-impl-base-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/config/arquillian-config-impl-base/1.1.3.Final/arquillian-config-impl-base-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="shrinkwrap-descriptors-spi-2.0.0-alpha-5.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-spi/2.0.0-alpha-5/shrinkwrap-descriptors-spi-2.0.0-alpha-5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="fest-assert-1.4.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/easytesting/fest-assert/1.4/fest-assert-1.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="fest-util-1.1.6.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/easytesting/fest-util/1.1.6/fest-util-1.1.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="shrinkwrap-api-1.2.1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/shrinkwrap-api/1.2.1/shrinkwrap-api-1.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-container-test-impl-base-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/container/arquillian-container-test-impl-base/1.1.3.Final/arquillian-container-test-impl-base-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-container-test-api-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/container/arquillian-container-test-api/1.1.3.Final/arquillian-container-test-api-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-container-test-spi-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/container/arquillian-container-test-spi/1.1.3.Final/arquillian-container-test-spi-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-test-spi-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/test/arquillian-test-spi/1.1.3.Final/arquillian-test-spi-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-config-api-1.1.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/config/arquillian-config-api/1.1.3.Final/arquillian-config-api-1.1.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="shrinkwrap-impl-base-1.2.1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/shrinkwrap-impl-base/1.2.1/shrinkwrap-impl-base-1.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="shrinkwrap-spi-1.2.1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/shrinkwrap-spi/1.2.1/shrinkwrap-spi-1.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="shrinkwrap-descriptors-api-base-2.0.0-alpha-5.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-api-base/2.0.0-alpha-5/shrinkwrap-descriptors-api-base-2.0.0-alpha-5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>

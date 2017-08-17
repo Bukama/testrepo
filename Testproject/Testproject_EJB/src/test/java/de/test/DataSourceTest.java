@@ -1,17 +1,21 @@
 package de.test;
 
 import java.io.File;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.persistence.UsingDataSet;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import de.test.entities.Emp;
 
 @RunWith(Arquillian.class)
 public class DataSourceTest {
@@ -39,9 +43,23 @@ public class DataSourceTest {
     testclass.greet(System.out, "Earthling");
   }
 
-  /*
-   * @Test public void GetAllCustomers() { List<Emp> allEmps = testclass.getAllEmps();
-   *
-   * Assert.assertEquals(14, allEmps.size()); }
-   */
+  // @ApplyScriptBefore("prepare_test.sql")
+  @UsingDataSet("empBefore.xml") // Ohne Dataset läuft es
+  @Test
+  public void GetAllCustomers() {
+    List<Emp> allEmps = testclass.getAllEmps();
+
+    // Standardmäßig sind 14 Datensätze in der DB
+    // Durch das PrepareStatement sollten es mehr sein
+    Assert.assertEquals(16, allEmps.size());
+  }
+
+  @Test
+  public void DeleteAllCustomers() {
+    // Wirft exception wegen unzurecihender Recht.Bin ur gerade zu doof das Beispiel zu finden wo wir die "inneren"
+    // Exceptions ausgelesen haben
+    testclass.removeAllEmps();
+
+  }
+
 }

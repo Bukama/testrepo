@@ -24,8 +24,9 @@
 		<property name="defaultCleanupStrategy">USED_ROWS_ONLY</property>
     <property name="defaultDataSource">java:/WritingDS</property>
 	</extension>
+  
+<extension qualifier="persistence-dbunit">
+    <property name="schema">bish</property>
+</extension>  
 
-	<extension qualifier="transaction">
-		<property name="manager">java:jboss/UserTransaction</property>
-	</extension>
 </arquillian>

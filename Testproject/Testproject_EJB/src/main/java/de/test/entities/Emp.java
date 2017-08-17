@@ -14,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -23,6 +24,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @NamedQuery(name = "Emp.findAll", query = "SELECT e FROM Emp e")
+@Table(name = "Emp", schema = "bish")
 public class Emp implements Serializable {
   private static final long serialVersionUID = 1L;
 
