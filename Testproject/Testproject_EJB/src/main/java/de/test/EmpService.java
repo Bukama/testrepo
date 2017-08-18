@@ -16,7 +16,7 @@ import de.test.entities.Emp;
 @LocalBean
 public class EmpService implements IEmpService {
 
-  @PersistenceContext
+  @PersistenceContext // (unitName = "ReadingUnit")
   private EntityManager em;
 
   public void myFunction(String name) {

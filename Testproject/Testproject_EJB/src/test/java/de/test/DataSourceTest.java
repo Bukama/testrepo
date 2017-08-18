@@ -3,7 +3,7 @@ package de.test;
 import java.io.File;
 import java.util.List;
 
-import javax.inject.Inject;
+import javax.ejb.EJB;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -12,7 +12,9 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 
 import de.test.entities.Emp;
@@ -34,7 +36,7 @@ public class DataSourceTest {
     return jar;
   }
 
-  @Inject
+  @EJB
   EmpService testclass;
 
   @Test
@@ -43,21 +45,24 @@ public class DataSourceTest {
     testclass.greet(System.out, "Earthling");
   }
 
+  @Rule
+  public ExpectedException thrown = ExpectedException.none();
+
   // @ApplyScriptBefore("prepare_test.sql")
-  @UsingDataSet("empBefore.xml") // Ohne Dataset läuft es
+  @UsingDataSet("empBefore.xml")
   @Test
   public void GetAllCustomers() {
     List<Emp> allEmps = testclass.getAllEmps();
 
-    // Standardmäßig sind 14 Datensätze in der DB
-    // Durch das PrepareStatement sollten es mehr sein
-    Assert.assertEquals(16, allEmps.size());
+    Assert.assertEquals(2, allEmps.size());
   }
 
+  @UsingDataSet("empBefore.xml")
   @Test
   public void DeleteAllCustomers() {
-    // Wirft exception wegen unzurecihender Recht.Bin ur gerade zu doof das Beispiel zu finden wo wir die "inneren"
-    // Exceptions ausgelesen haben
+    // thrown.expect(EJBException.class); // Äußere Exception
+    // thrown.expectCause(CoreMatchers.isA(SQLGrammarException.class)); // Gekapselte Exception
+
     testclass.removeAllEmps();
 
   }

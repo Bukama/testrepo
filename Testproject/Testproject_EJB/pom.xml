@@ -47,7 +47,14 @@
         <groupId>org.jboss.arquillian.extension</groupId>
         <artifactId>arquillian-persistence-dbunit</artifactId>
         <version>${arquillian.persistence}</version>
-      </dependency>    
+      </dependency>  
+      
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.2.10.Final</version>
+</dependency>      
+        
   </dependencies>
 
 
