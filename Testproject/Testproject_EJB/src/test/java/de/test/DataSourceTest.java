@@ -1,10 +1,13 @@
 package de.test;
 
 import java.io.File;
+import java.sql.SQLSyntaxErrorException;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.ejb.EJBException;
 
+import org.hamcrest.CoreMatchers;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.persistence.UsingDataSet;
@@ -51,7 +54,7 @@ public class DataSourceTest {
   // @ApplyScriptBefore("prepare_test.sql")
   @UsingDataSet("empBefore.xml")
   @Test
-  public void GetAllCustomers() {
+  public void GetAllEmps() {
     List<Emp> allEmps = testclass.getAllEmps();
 
     Assert.assertEquals(2, allEmps.size());
@@ -59,9 +62,9 @@ public class DataSourceTest {
 
   @UsingDataSet("empBefore.xml")
   @Test
-  public void DeleteAllCustomers() {
-    // thrown.expect(EJBException.class); // Äußere Exception
-    // thrown.expectCause(CoreMatchers.isA(SQLGrammarException.class)); // Gekapselte Exception
+  public void DeleteAllEmps() {
+    thrown.expect(EJBException.class); // Äußere Exception
+    thrown.expectCause(CoreMatchers.isA(SQLSyntaxErrorException.class)); // Gekapselte Exception
 
     testclass.removeAllEmps();
 
