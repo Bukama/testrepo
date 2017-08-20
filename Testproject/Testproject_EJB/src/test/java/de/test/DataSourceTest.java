@@ -1,11 +1,11 @@
 package de.test;
 
 import java.io.File;
-import java.sql.SQLSyntaxErrorException;
 import java.util.List;
 
 import javax.ejb.EJB;
 import javax.ejb.EJBException;
+import javax.persistence.PersistenceException;
 
 import org.hamcrest.CoreMatchers;
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -63,11 +63,10 @@ public class DataSourceTest {
   @UsingDataSet("empBefore.xml")
   @Test
   public void DeleteAllEmps() {
-    thrown.expect(EJBException.class); // Äußere Exception
-    thrown.expectCause(CoreMatchers.isA(SQLSyntaxErrorException.class)); // Gekapselte Exception
+    thrown.expect(EJBException.class);
+    thrown.expectCause(CoreMatchers.isA(PersistenceException.class));
 
     testclass.removeAllEmps();
-
   }
 
 }
