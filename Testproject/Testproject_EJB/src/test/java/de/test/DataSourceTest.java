@@ -10,11 +10,13 @@ import javax.persistence.PersistenceException;
 import org.hamcrest.CoreMatchers;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.persistence.ApplyScriptBefore;
 import org.jboss.arquillian.persistence.UsingDataSet;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -51,20 +53,23 @@ public class DataSourceTest {
   @Rule
   public ExpectedException thrown = ExpectedException.none();
 
-  // @ApplyScriptBefore("prepare_test.sql")
-  @UsingDataSet("empBefore.xml")
+  @ApplyScriptBefore("prepare_test.sql")
   @Test
   public void GetAllEmps() {
     List<Emp> allEmps = testclass.getAllEmps();
 
-    Assert.assertEquals(2, allEmps.size());
+    Assert.assertEquals(16, allEmps.size());
   }
 
+  @Ignore
   @UsingDataSet("empBefore.xml")
   @Test
   public void DeleteAllEmps() {
     thrown.expect(EJBException.class);
     thrown.expectCause(CoreMatchers.isA(PersistenceException.class));
+    thrown.expectMessage("could not execute statement");
+
+    // Am liebsten würde ich aber gerne "ORA-01031: insufficient privileges" fishen
 
     testclass.removeAllEmps();
   }

@@ -38,4 +38,5 @@ public class EmpService implements IEmpService {
   public List<Emp> getAllEmps() {
     return em.createQuery("FROM Emp", Emp.class).getResultList();
   }
+
 }

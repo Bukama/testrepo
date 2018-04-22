@@ -1,7 +1,5 @@
 delete from bish.EMP;
 
-commit;
-
 Insert into bish.EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO) values ('7839','KING','PRESIDENT',null,to_date('17.11.81','DD.MM.RR'),'5000',null,'10');
 Insert into bish.EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO) values ('7698','BLAKE','MANAGER','7839',to_date('01.05.81','DD.MM.RR'),'2850',null,'30');
 Insert into bish.EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO) values ('7782','CLARK','MANAGER','7839',to_date('09.06.81','DD.MM.RR'),'2450',null,'10');

@@ -7,17 +7,17 @@
 
 	<defaultProtocol type="Servlet 3.0" />
 
-<!-- 
+
 	<group qualifier="wildflys" default="true">
 		<container qualifier="wildfly-prepared" default="true">
 			<configuration>
 				<property name="managementAddress">localhost</property>
-				<property name="managementPort">${mgmtport}</property>
-				<property name="username">${mgmtuser}</property>
-				<property name="password">${mgmtpwd}</property>
+				<property name="managementPort">9990</property>
+				<property name="username">admin</property>
+				<property name="password">admin</property>
 			</configuration>
 		</container>
-	</group> -->
+	</group> 
 
 	<extension qualifier="persistence">
 		<property name="defaultDataSeedStrategy">CLEAN_INSERT</property>
@@ -27,6 +27,13 @@
   
 <extension qualifier="persistence-dbunit">
     <property name="schema">bish</property>
+    <!-- <property name="datatypeFactory">org.dbunit.ext.oracle.Oracle10DataTypeFactory</property> -->
 </extension>  
+
+
+<extension qualifier="persistence-script">
+  <!-- Damit multi-line-Scripts korrekt ausgefuerht werden -->
+  <property name="sqlDialect">oracle</property>
+</extension>
 
 </arquillian>

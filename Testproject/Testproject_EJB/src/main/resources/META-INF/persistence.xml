@@ -8,10 +8,15 @@
 
     <jta-data-source>java:/ReadingDS</jta-data-source>
     <shared-cache-mode>NONE</shared-cache-mode>
-
+    
+  
     <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+      
+    
       <property name="show_sql" value="true" />
-      <property name="format_sql" value="true" />
+      <property name="hibernate.generate_statistics" value="true" />
+      <property name="hibernate.format_sql" value="true" />
       <property name="use_sql_comments" value="true" />
     </properties>
   </persistence-unit>
